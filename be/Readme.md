@@ -1,5 +1,6 @@
 Make a call to this - https://randomuser.me/api/
 
+```
 {
   "results": [
     {
@@ -66,3 +67,4 @@ Make a call to this - https://randomuser.me/api/
     "version": "1.4"
   }
 }
+```
