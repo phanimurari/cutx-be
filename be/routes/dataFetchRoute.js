@@ -3,8 +3,9 @@ const express = require('express');
 const router = express.Router();
 const fetch = (...args) =>
 	import('node-fetch').then(({default: fetch}) => fetch(...args));
+const authenticateToken = require('../middlewares/authMiddleware');
 
-router.get(`/`, async function (req, res) {
+router.get(`/`, authenticateToken, async function (req, res) {
 	// Construct the URL with query parameters from the request
 	const url = `https://randomuser.me/api/?gender=${req.query.gender}&nat=${req.query.nat}`;
 	const options = {

@@ -1,1 +1,24 @@
-GET http://localhost:3005?gender=male&nat=US
+GET http://localhost:3000?gender=male&nat=US
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzdmYzVhZTg3Zjc3ODVkMjc5YWRlNTIiLCJpYXQiOjE3MzY1MzQ5ODUsImV4cCI6MTczNjUzODU4NX0.JiWg877GLYtVxlw7xoo9id0kMfP3_Vk0J5PrGU1Bkjc
+
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "username": "phanimurari",
+  "email": "phanimurari@yopmail.com",
+  "password": "PhaniMurari@12345"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "phanimurari",
+  "email": "phanimurari@yopmail.com",
+  "password": "PhaniMurari@12345"
+}
