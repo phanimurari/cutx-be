@@ -5,7 +5,8 @@ const fetch = (...args) =>
 	import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 router.get(`/`, async function (req, res) {
-	const url = 'https://randomuser.me/api/';
+	// Construct the URL with query parameters from the request
+	const url = `https://randomuser.me/api/?gender=${req.query.gender}&nat=${req.query.nat}`;
 	const options = {
 		method: 'GET',
 	};
